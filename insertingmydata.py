@@ -1,15 +1,10 @@
 import psycopg2
+import environment
 
-DB_NAME = "fvhzkruo"
-DB_USER = "fvhzkruo"
-DB_PASS = "YdAcjDV7DqADZrZFy3Nh3OnWXiuVwMal"
-DB_HOST = "heffalump.db.elephantsql.com"
-DB_PORT = "5432"
-
-conn = psycopg2.connect(database = DB_NAME, user = DB_USER, password = DB_PASS, host = DB_HOST, port = DB_PORT)
+conn = psycopg2.connect(database = environment.DB_NAME, user = environment.DB_USER, password = environment.DB_PASS, host = environment.DB_HOST, port = environment.DB_PORT)
 
 print("database connection good yo")    
 cur = conn.cursor()
-cur.execute("INSERT INTO Employee (ID, NAME, EMAIL) VALUES (3,'Nathan', 'robot.nerd@beep.boop')")
+cur.execute("INSERT INTO Employee (ID, NAME, EMAIL) VALUES (1,'Owen', 'owen-the-terrible@stp.com')")
 conn.commit()
 print(" inserting data executed successfully")

@@ -1,14 +1,10 @@
-
+import environment
 import psycopg2
 
-DB_NAME = "fvhzkruo"
-DB_USER = "fvhzkruo"
-DB_PASS = "YdAcjDV7DqADZrZFy3Nh3OnWXiuVwMal"
-DB_HOST = "heffalump.db.elephantsql.com"
-DB_PORT = "5432"
 
+print(environment)
 try: 
-    conn = psycopg2.connect(database = DB_NAME, user = DB_USER, password = DB_PASS, host = DB_HOST, port = DB_PORT)
+    conn = psycopg2.connect(database = environment.DB_NAME, user = environment.DB_USER, password = environment.DB_PASS, host = environment.DB_HOST, port =environment.DB_PORT)
     print("Database connected yo")
 except:
     print("database not connected")
