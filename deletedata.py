@@ -1,5 +1,5 @@
 import psycopg2
-import environment
+import dbENV.environment as environment
 conn = psycopg2.connect(database = environment.DB_NAME, user = environment.DB_USER, password = environment.DB_PASS, host = environment.DB_HOST, port = environment.DB_PORT)
 
 print("database connection good yo")    

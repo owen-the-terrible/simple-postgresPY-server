@@ -1,5 +1,0 @@
-DB_NAME = "fvhzkruo"
-DB_USER = "fvhzkruo"
-DB_PASS = "YdAcjDV7DqADZrZFy3Nh3OnWXiuVwMal"
-DB_HOST = "heffalump.db.elephantsql.com"
-DB_PORT = "5432"
